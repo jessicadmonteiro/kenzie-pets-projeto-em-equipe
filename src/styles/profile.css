@@ -1,0 +1,135 @@
+body{
+    background-color: var(--fundo-main);
+}
+
+/*-------------------Header-------------------*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 90%;
+    margin: 5px auto;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 90px;
+}
+.logo h1{
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--cor-primaria);
+    text-shadow: -3px 2px 5px rgba(150, 150, 150, 0.68);
+}
+.logo span{
+    color: #086fff;
+}
+.buttoes-header{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.ancora-header{
+    padding: 4px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1.5px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
+}
+.butao-logout{
+    padding: 4px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: var(--cor-primaria);
+    border: 1.5px solid var(--cor-primaria);
+    color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
+}
+/*-------------------Main-------------------*/
+main{
+    display: flex;
+    flex-direction: column;
+}
+.main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.fundo-foto{
+    width: 100%;
+    height: 225px;
+    background-color: var(--cor-primaria);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 3px solid black;
+}
+.fundo-foto img{
+    width: 1225;
+    height: 125%;
+    max-width: 100%;
+    top: 10.5%;
+    position: absolute;
+    object-fit: cover;
+}
+.caixa-img-perfil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 6px solid #FFFFFF;
+    transform: translateY(-50%);
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.editar-perfil{
+    display: flex;
+    align-items: flex-start;
+    position: absolute;
+    left: 5px;
+    top: 210px;
+    width: 250px;
+    gap: 15px;
+    bottom: 35px;
+    background-color: rgba(0, 0, 0, 0.621);
+    height: 150px;
+    padding-left: 50px;
+    padding-top: 5px;
+    opacity: 0;
+    transition: 1s ease;
+}
+.editar-perfil span{
+    font-size: 25px;
+    color: white;
+    font-weight: 500;
+}
+.img-perfil{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+.caixa-img-perfil:hover .img-perfil{
+    transform: scale(1.1);
+}
+.caixa-img-perfil:hover .editar-perfil{
+    opacity: 1;
+}
