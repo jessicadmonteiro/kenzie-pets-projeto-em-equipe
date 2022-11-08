@@ -17,6 +17,8 @@ export async function getLogin(body) {
 
             localStorage.setItem("userToken", response.token)
 
+            window.location.assign("../../pages/homeLogado/index.html")
+
         }
     }
     catch (err) {

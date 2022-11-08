@@ -5,8 +5,6 @@ export function eventLogin () {
 
     const local = document.querySelector(".form-login")
 
-    console.log(local)
-
     local.addEventListener("submit", async (event) => {
 
         event.preventDefault()
@@ -15,8 +13,8 @@ export function eventLogin () {
 
         const body = {
 
-            email:event.target.children[0].value,
-            password:event.target.children[1].value,
+            email:event.target.children[1].value,
+            password:event.target.children[2].value,
   
         }
 
