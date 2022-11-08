@@ -1,40 +1,30 @@
-header {
-    width: 100%;
-    height: 3.75rem;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3.75rem 0 2.7rem;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 2.5rem;
-}
-
-.img_logo {
-    width: 90px;
-}
-
 .container_menu {
     display: flex;
     gap: 1.25rem;
 }
 
 .botao_register {
-    width: 6.25rem;
-    height: 2rem;
-    color: var(--cor-primaria);
+    padding: 4px 24px;
+    font-weight: 600;
+    font-size: 1rem;
     background-color: transparent;
-    border: 1px solid var(--cor-primaria);
-    border-radius: 1rem;
+    border: 1.5px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
 }
 
 .botao_login {
-    width: 6.25rem;
-    height: 2rem;
+    padding: 4px 24px;
+    font-weight: 600;
+    font-size: 1rem;
     background-color: var(--cor-primaria);
-    border-radius: 1rem;
-    border: transparent;
-    color: #ffff;
+    border: 1.5px solid var(--cor-primaria);
+    color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
 }
 
 ul {
