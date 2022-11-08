@@ -1,23 +1,12 @@
 const body = document.querySelector("body")
-const botaoLogin = document.querySelector(".abrir-login")
+const botaoLogin = document.querySelector(".botao_login")
 
-botaoLogin.addEventListener("click", (e) =>{
+botaoLogin.addEventListener("click", (e) => {
     let modalMaior = document.querySelector(".fundo-modal")
     modalMaior.classList.toggle("show-modal")
 })
-const botaoCadastrar = document.querySelector(".abrir-cadastro")
-botaoCadastrar.addEventListener("click", (e) =>{
-    let modalMaior = document.querySelector(".modal-cadastro-fundo")
-    modalMaior.classList.toggle("show-modal")
-})
 
-const botaoDeletarConta = document.querySelector(".deletar-conta")
-botaoDeletarConta.addEventListener("click", (e) =>{
-    let modalMaior = document.querySelector(".modal-removePerfil-fundo")
-    modalMaior.classList.toggle("show-modal")
-})
-
-function modalLogin(){
+export function modalLogin() {
 
     let divSuperiorModal = document.createElement("div")
     divSuperiorModal.classList.add("fundo-modal")
@@ -35,11 +24,13 @@ function modalLogin(){
     inputEmail.classList.add("input-geral")
     inputEmail.placeholder = "Email"
     inputEmail.type = "email"
+    inputEmail.value = "email"
 
     let inputSenha = document.createElement("input")
     inputSenha.classList.add("input-geral")
     inputSenha.placeholder = "Password"
     inputSenha.type = "password"
+    inputSenha.value = "password"
 
     let botaoLogin = document.createElement("button")
     botaoLogin.classList.add("botao-login")
@@ -56,16 +47,26 @@ function modalLogin(){
     botaoFechar.classList.add("fechar-modal")
     botaoFechar.innerText = "X"
 
+    botaoFechar.addEventListener("click", () => {
+        let modalMaior = document.querySelector(".fundo-modal")
+        modalMaior.classList.toggle("show-modal")
+    })
+
     formulario.append(tagH3, inputEmail, inputSenha, botaoLogin, tagSpan)
     tagSpan.appendChild(botaoIrCadastro)
     divModalLogin.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalLogin)
     body.appendChild(divSuperiorModal)
 }
-modalLogin()
 
 
-function modalCadastro(){
+const botaoCadastrar = document.querySelector(".botao_register")
+botaoCadastrar.addEventListener("click", (e) => {
+    let modalMaior = document.querySelector(".modal-cadastro-fundo")
+    modalMaior.classList.toggle("show-modal")
+})
+
+export function modalCadastro() {
 
     let divSuperiorModal = document.createElement("div")
     divSuperiorModal.classList.add("modal-cadastro-fundo")
@@ -114,11 +115,17 @@ function modalCadastro(){
     botaoFechar.classList.add("fechar-modal")
     botaoFechar.innerText = "X"
 
+    botaoFechar.addEventListener("click", () => {
+        let modalMaior = document.querySelector(".modal-cadastro-fundo")
+        modalMaior.classList.toggle("show-modal")
+    })
+
     formulario.append(tagH3, inputNome, inputEmail, inputSenha, inputAvatar, botaoCadastrar, tagSpan)
     tagSpan.appendChild(botaoIrLogin)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
+<<<<<<< HEAD:src/scripts/login.js
 }
 modalCadastro()
 function deletarConta(){
@@ -154,3 +161,6 @@ function deletarConta(){
 deletarConta()
 
 
+=======
+}
+>>>>>>> a5493eb4323620dbec568a2ec9c3d91a608ea124:src/scripts/modal.js
