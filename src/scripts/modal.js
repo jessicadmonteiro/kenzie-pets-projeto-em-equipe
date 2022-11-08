@@ -125,7 +125,6 @@ export function modalCadastro() {
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
-<<<<<<< HEAD:src/scripts/login.js
 }
 modalCadastro()
 function deletarConta(){
@@ -160,7 +159,3 @@ function deletarConta(){
 }
 deletarConta()
 
-
-=======
-}
->>>>>>> a5493eb4323620dbec568a2ec9c3d91a608ea124:src/scripts/modal.js
