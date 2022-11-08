@@ -1,4 +1,5 @@
 import { atualizarPerfil, petCadastro, petAtualizar, deletarConta } from "./modalProfile.js";
+import { cadastrarPet, eventEditar } from "./requisition.js";
 
 atualizarPerfil()
 
@@ -7,6 +8,10 @@ petCadastro()
 petAtualizar()
 
 deletarConta()
+
+eventEditar()
+
+cadastrarPet()
 
 
 const token = localStorage.getItem("userToken")
