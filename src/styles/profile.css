@@ -4,59 +4,8 @@ body{
 }
 
 /*-------------------Header-------------------*/
-
 header{
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-    width: 90%;
-    margin: 5px auto;
-}
-.logo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo img{
-    width: 90px;
-}
-.logo h1{
-    font-family: var(--fonte-texto);
-    font-weight: 700;
-    font-size: 1.75rem;
-    color: var(--cor-primaria);
-    text-shadow: -3px 2px 5px rgba(150, 150, 150, 0.68);
-}
-.logo span{
-    color: #086fff;
-}
-.buttoes-header{
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-    align-items: center;
-}
-.ancora-header{
-    padding: 4px 24px;
-    font-weight: 600;
-    font-size: 1rem;
-    background-color: transparent;
-    border: 1.5px solid var(--cor-primaria);
-    color: var(--cor-primaria);
-    border-radius: 16px;
-    cursor: pointer;
-    font-family: var(--fonte-texto);
-}
-.botao-logout{
-    padding: 4px 24px;
-    font-weight: 600;
-    font-size: 1rem;
-    background-color: var(--cor-primaria);
-    border: 1.5px solid var(--cor-primaria);
-    color: white;
-    border-radius: 16px;
-    cursor: pointer;
-    font-family: var(--fonte-texto);
+    border-bottom: 0px solid rgba(0, 0, 0, 0.1);
 }
 /*-------------------Main Header-------------------*/
 main{

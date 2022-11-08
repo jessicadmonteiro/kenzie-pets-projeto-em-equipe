@@ -1,3 +1,9 @@
+import { modalLogin, modalCadastro} from "../../scripts/modal.js";
+import { eventLogin } from "../../scripts/requisition.js";
+modalLogin()
+modalCadastro()
+eventLogin()
+
 async function adocao () {
     const tokenAcesso = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njc2ODYzMDksImV4cCI6MTY2ODI5MTEwOSwic3ViIjoiYTI1YjAxZmEtZWFmNS00NDExLWFiZDktOTJkNTJjODQzZjg3In0.c9y8SCMeFiuIqms0U2a1IWruh0A6NPoqMqcHCo-4ubw"
 
