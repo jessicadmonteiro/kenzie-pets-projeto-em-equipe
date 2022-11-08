@@ -111,6 +111,35 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+.modal-cadastro-pet-fundo{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fundo-modal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.modal-atualizar-pet-fundo{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fundo-modal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px; 
+}
+
 .modal-cadastro{
     display: flex;
     flex-direction: column;
