@@ -209,6 +209,9 @@ body .info-usuarios{
 }
 .pet img{
     object-fit: cover;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
 }
 .info-pets{
     display: flex;
@@ -232,4 +235,54 @@ body .info-usuarios{
     background-color: var(--cor-primaria);
     color: white;
     border-radius: 16px;
+}
+/*-------------------footer-------------------*/
+footer {
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    padding-top: 0.938rem;
+    background-color: var(--footer-cor-primaria);
+    margin-top: 3.75rem;
+    border-top: 1px solid var(--cor-primaria);
+    border-bottom: 1px solid var(--cor-primaria);
+}
+footer>p {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: var(--cor-primaria);
+}
+/*-------------------loading-------------------*/
+.carregando{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--fundo-modal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.carregando h2{
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.carregando-on{
+    display: flex;
+}
+
+.bug-Li{
+    opacity: 0;
+    display: none;
+}
+.sem-pet{
+    margin-bottom: 150px;
+    font-size: 25px;
+    color: var(--cor-secundario);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.529);
 }
