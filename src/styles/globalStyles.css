@@ -16,6 +16,7 @@
     --cor-primaria: #0ca6ff;
     --vermelho-invalido:#EA534A;
     --cinza-normal:#90A4AE;
+    --fundo-modal:rgba(27, 28, 30, 0.65);
     --fonte-texto:  'Roboto', sans-serif;
 }
 
@@ -37,4 +38,7 @@ ul{
 
 a{
     text-decoration: none;
+}
+button{
+    cursor: pointer;
 }
