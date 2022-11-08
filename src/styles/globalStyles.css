@@ -8,14 +8,14 @@
 } 
 
 
-:root{
-    --verde-confirmar: #33CC66;
-    --fundo-main:#F5F5F5;
-    --borda-card:rgba(78, 32, 150, 0.25);
+:root{ 
+    --verde-confirmar:     #33CC66;
+    --fundo-main:          #F5F5F5;
+    --borda-card:          rgba(78, 32, 150, 0.25);
     --footer-cor-primaria: #F1EEF7;
-    --cor-primaria: #4E2096;
-    --vermelho-invalido:#EA534A;
-    --cinza-normal:#90A4AE;
+    --cor-primaria:        #4E2096;
+    --vermelho-invalido:   #EA534A;
+    --cinza-normal:        #90A4AE;
     --fonte-texto:  'Roboto', sans-serif;
 }
 
