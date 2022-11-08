@@ -8,10 +8,10 @@
 } 
 
 
-:root{
-    --verde-confirmar: #33CC66;
-    --fundo-main:#F5F5F5;
-    --borda-card:rgba(78, 32, 150, 0.25);
+:root{ 
+    --verde-confirmar:     #33CC66;
+    --fundo-main:          #F5F5F5;
+    --borda-card:          rgba(78, 32, 150, 0.25);
     --footer-cor-primaria: #F1EEF7;
     --cor-primaria: #0ca6ff;
     --vermelho-invalido:#EA534A;
