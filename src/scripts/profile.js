@@ -1,4 +1,6 @@
+import { autorizacao } from "./autorizacao.js";
 import { atualizarPerfil, petCadastro, petAtualizar, deletarConta } from "./modalProfile.js";
+import { cadastrarPet, eventEditar } from "./requisition.js";
 
 atualizarPerfil()
 
@@ -7,6 +9,12 @@ petCadastro()
 petAtualizar()
 
 deletarConta()
+
+eventEditar()
+
+cadastrarPet()
+
+autorizacao()
 
 
 const token = localStorage.getItem("userToken")
