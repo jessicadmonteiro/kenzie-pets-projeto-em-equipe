@@ -154,16 +154,3 @@ function deletarConta(){
 deletarConta()
 
 
-
-
-
-{/* <div class="fundo-modal">
-        <div class="modal-removerPerfil">
-            <div class="area-remove">
-                <h3>Desejo mesmo deletar sua conta?</h3>
-                <button class="botao-materConta">Não desejo deletar minha conta</button>
-                <button class="botao-deletarConta">Quero deletar minha conta</button>
-             </div>
-            <button class="fechar-modal">X</button>
-        </div>
-    </div> */}
