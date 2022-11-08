@@ -1,3 +1,5 @@
+import { deletarUsuario } from "./request.js"
+
 const body = document.querySelector("body")
 const botaoAtualizar = document.querySelector(".botao-atulizar-perfil")
 
@@ -212,6 +214,14 @@ export function deletarConta() {
     let botaoDeletar = document.createElement("button")
     botaoDeletar.classList.add("botao-deletarConta")
     botaoDeletar.innerText = "Quero deletar minha conta"
+    
+    botaoDeletar.addEventListener("click", async () => {
+
+        await deletarUsuario()
+
+        localStorage.removeItem("userToken")
+
+    })
 
     let botaoFechar = document.createElement("button")
     botaoFechar.classList.add("fechar-modal")

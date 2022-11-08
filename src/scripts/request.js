@@ -72,7 +72,7 @@ export async function cadastroPet(body) {
 
             const response = await request.json()
 
-            return response
+            return window.location.reload()
 
         } 
     }
@@ -83,7 +83,7 @@ export async function cadastroPet(body) {
     }
 }
 
-export async function deleteUsers() {
+export async function deletarUsuario() {
 
     await fetch(`https://m2-api-adot-pet.herokuapp.com/users/profile`, {
         method: "DELETE",
