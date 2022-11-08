@@ -11,8 +11,9 @@
 :root{ 
     --verde-confirmar:     #33CC66;
     --fundo-main:          #F5F5F5;
-    --borda-card:          rgba(78, 32, 150, 0.25);
+    --borda-card:          #0ca6ff9d;
     --footer-cor-primaria: #F1EEF7;
+    --cor-secundario: #0c85ff;
     --cor-primaria: #0ca6ff;
     --vermelho-invalido:#EA534A;
     --cinza-normal:#90A4AE;

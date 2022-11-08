@@ -1,5 +1,6 @@
 body{
     background-color: var(--fundo-main);
+    font-family: var(--fonte-texto);
 }
 
 /*-------------------Header-------------------*/
@@ -46,7 +47,7 @@ header{
     cursor: pointer;
     font-family: var(--fonte-texto);
 }
-.butao-logout{
+.botao-logout{
     padding: 4px 24px;
     font-weight: 600;
     font-size: 1rem;
@@ -57,7 +58,7 @@ header{
     cursor: pointer;
     font-family: var(--fonte-texto);
 }
-/*-------------------Main-------------------*/
+/*-------------------Main Header-------------------*/
 main{
     display: flex;
     flex-direction: column;
@@ -132,4 +133,154 @@ main{
 }
 .caixa-img-perfil:hover .editar-perfil{
     opacity: 1;
+}
+.info-usuarios{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 480px;
+    height: 254px;
+    padding: 0 50px;
+    border: 1px solid var(--borda-card);
+    transform: translateY(-60%);
+    opacity: 0;
+    border-radius: 6px;
+    transition: 0.4s ease;
+}
+.info-usuarios-on{
+    display: flex;
+    transform: translateY(-40%);
+    opacity: 1;
+    transition: 0.4s ease;
+}
+body .info-usuarios{
+    animation: animacao-Info-usuarios;
+    animation-duration: 1s;
+}
+@keyframes animacao-Info-usuarios {
+			
+    0% {
+        transform: translateY(-100%);
+        filter:blur(15px);
+        opacity:0;
+    }
+    100% {
+        filter:blur(0);
+        transform: translateY(-40);
+        opacity:1;
+    }
+}
+.info-usuarios h2{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    font-family: var(--fonte-texto);
+    color: var(--cor-secundario);
+}
+.info-usuario{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.info-usuario p{
+    font-weight: 600;
+    font-size: 1rem;
+}
+.info-usuario span{
+    color: var(--cor-secundario);
+}
+.botao-usuario{
+    display: flex;
+    justify-content: space-around;
+}
+.botao-atulizar-perfil{
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: none;
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 16px;
+}
+.botao-deletar-perfil{
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border: 2px solid var(--vermelho-invalido);
+    background-color: white;
+    color: var(--vermelho-invalido);
+    padding: 6px 15px;
+    border-radius: 16px;
+}
+/*-------------------Main Pets-------------------*/
+
+.main-pets{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 1000px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.cadatrar-pets{
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 4px 20px;
+    width: 200px;
+    border: 1px solid var(--verde-confirmar);
+    background-color: var(--verde-confirmar);
+    border-radius: 16px;
+    color:white;
+    cursor: pointer;
+}
+.pets{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.pet{
+    display: flex;
+    gap: 25px;
+    width: 480px;
+    height: 200px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #0ca6ff6f;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+.pet img{
+    object-fit: cover;
+}
+.info-pets{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 40px 10px;
+}
+.info-pets p{
+    font-weight: 600;
+    font-size: 1rem;
+}
+.info-pets span{
+    color: var(--cor-secundario);
+}
+.atulizar-pet{
+    font-weight: 600;
+    font-size: 1rem;
+    font-family: var(--fonte-texto);
+    padding: 4px 16px;
+    border: 1px solid var(--cor-primaria);
+    background-color: var(--cor-primaria);
+    color: white;
+    border-radius: 16px;
 }
