@@ -1,5 +1,5 @@
 const body = document.querySelector("body")
-const botaoAtualizar = document.querySelector(".botao-atualizar-perfil")
+const botaoAtualizar = document.querySelector(".botao-atulizar-perfil")
 
 botaoAtualizar.addEventListener("click", (e) => {
     let modalMaior = document.querySelector(".modal-cadastro-fundo")
@@ -67,7 +67,7 @@ export function atualizarPerfil() {
     body.appendChild(divSuperiorModal)
 }
 
-const botaoCadastrarPet = document.querySelector(".botao-cadastrar-pet")
+const botaoCadastrarPet = document.querySelector(".cadatrar-pets")
 
 botaoCadastrarPet.addEventListener("click", (e) => {
    
@@ -131,7 +131,7 @@ export function petCadastro() {
     body.appendChild(divSuperiorModal)
 }
 
-const botaoAtualizarPet = document.querySelector(".botao-atualizar-pet")
+const botaoAtualizarPet = document.querySelector(".atulizar-pet")
 
 botaoAtualizarPet.addEventListener("click", (e) => {
     console.log("click")
@@ -185,7 +185,7 @@ export function petAtualizar() {
     body.appendChild(divSuperiorModal)
 }
 
-const botaoDeletarConta = document.querySelector(".deletar-conta")
+const botaoDeletarConta = document.querySelector(".botao-deletar-perfil")
 
 botaoDeletarConta.addEventListener("click", (e) =>{
 
