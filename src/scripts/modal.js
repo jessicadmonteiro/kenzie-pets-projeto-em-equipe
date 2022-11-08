@@ -123,4 +123,42 @@ export function modalCadastro() {
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
+<<<<<<< HEAD:src/scripts/login.js
 }
+modalCadastro()
+function deletarConta(){
+    let divSuperiorModal = document.createElement("div")
+    divSuperiorModal.classList.add("modal-removePerfil-fundo")
+
+    let divModalDeletar = document.createElement("div")
+    divModalDeletar.classList.add("modal-removerPerfil")
+
+    let areaDeletar = document.createElement("div")
+    areaDeletar.classList.add("area-remove")
+
+    let tagH3 = document.createElement("h3")
+    tagH3.innerText = "Desejo mesmo deletar sua conta?"
+
+    let botaoManter = document.createElement("button")
+    botaoManter.classList.add("botao-materConta")
+    botaoManter.innerText = "Não desejo deletar minha conta"
+
+    let botaoDeletar = document.createElement("button")
+    botaoDeletar.classList.add("botao-deletarConta")
+    botaoDeletar.innerText = "Quero deletar minha conta"
+
+    let botaoFechar = document.createElement("button")
+    botaoFechar.classList.add("fechar-modal")
+    botaoFechar.innerText = "X"
+
+    areaDeletar.append(tagH3, botaoManter, botaoDeletar)
+    divModalDeletar.append(areaDeletar, botaoFechar)
+    divSuperiorModal.appendChild(divModalDeletar)
+    body.appendChild(divSuperiorModal)
+}
+deletarConta()
+
+
+=======
+}
+>>>>>>> a5493eb4323620dbec568a2ec9c3d91a608ea124:src/scripts/modal.js
