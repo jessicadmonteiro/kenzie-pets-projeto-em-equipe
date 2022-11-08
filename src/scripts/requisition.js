@@ -13,8 +13,8 @@ export function eventLogin () {
 
         const body = {
 
-            email:event.target.children[1].id,
-            password:event.target.children[2].id,
+            email:event.target.children[1].value,
+            password:event.target.children[2].value,
   
         }
 

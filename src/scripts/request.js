@@ -82,3 +82,15 @@ export async function cadastroPet(body) {
 
     }
 }
+
+export async function deleteUsers() {
+
+    await fetch(`https://m2-api-adot-pet.herokuapp.com/users/profile`, {
+        method: "DELETE",
+        headers: {
+            "Authorization": `Bearer ${localStorage.getItem("userToken")}`,
+        },
+    })
+        .then(res => res.json())
+        .then(res => console.log(res))
+}
