@@ -16,7 +16,6 @@ async function adocao () {
             }
         })
         const response = await request.json()
-        console.log(response)
         return response
     }catch (err) {
         console.log(err)
