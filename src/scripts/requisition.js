@@ -25,7 +25,7 @@ export function eventLogin () {
 
 export async function eventEditar () {
 
-    const local = document.querySelector(".form-cadastro")
+    const local = document.querySelector(".form-cadastro-att")
 
     local.addEventListener("submit", async (event) => {
 

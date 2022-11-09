@@ -15,10 +15,10 @@ export function atualizarPerfil() {
     divSuperiorModal.classList.add("modal-cadastro-fundo")
 
     let divModalCadastro = document.createElement("div")
-    divModalCadastro.classList.add("modal-cadastro")
+    divModalCadastro.classList.add("modal-atualizar")
 
     let formulario = document.createElement("form")
-    formulario.classList.add("form-cadastro")
+    formulario.classList.add("form-cadastro-att")
 
     let tagH3 = document.createElement("h3")
     tagH3.innerText = "Atualizar Perfil"
@@ -80,7 +80,7 @@ export function petCadastro() {
     divModalCadastro.classList.add("modal-cadastro")
 
     let formulario = document.createElement("form")
-    formulario.classList.add("form-cadastro")
+    formulario.classList.add("form-cadastro-att")
     formulario.id = "form-cadastro-pet"
 
     let tagH3 = document.createElement("h3")
