@@ -118,16 +118,10 @@ export function modalCadastro() {
 
 
     let botaoFechar = document.createElement("button")
-    botaoFechar.classList.add("fechar-modal")
+    botaoFechar.classList.add("fechar-modal-cadastro")
     botaoFechar.innerText = "X"
 
-    botaoFechar.addEventListener("click", (event) => {
 
-        event.preventDefault()
-
-        let modalMaior = document.querySelector(".modal-cadastro-fundo")
-        modalMaior.classList.remove("modal-fechar")
-    })
     
     divForm.append(formulario, botaoIrLogin)
     formulario.append(tagH3, inputNome, inputEmail, inputSenha, inputAvatar, botaoCadastrar)
@@ -191,3 +185,8 @@ irLogin()
     modalRegistro.classList.add("show-modal")
    })
 
+   const fecharModalCadastro = document.querySelector(".fechar-modal-cadastro")
+   fecharModalCadastro.addEventListener("click", (e) =>{
+    let modalRegistro = document.querySelector(".modal-cadastro-fundo")
+    modalRegistro.classList.remove("show-modal")
+   })
