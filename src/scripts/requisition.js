@@ -1,4 +1,4 @@
-import { getLogin, editarPerfilUsuario, cadastroPet } from "./request.js"
+import { getLogin, editarPerfilUsuario, cadastroPet, editarPet } from "./request.js"
 
 
 export function eventLogin () {
@@ -62,6 +62,30 @@ export async function cadastrarPet() {
         }
 
         await cadastroPet(body)
+
+    })
+
+}
+
+export async function eventEditarPet(id) {
+
+    const local = document.querySelector("#form-editar-pet")
+
+    local.addEventListener("submit", async (event) => {
+
+        event.preventDefault()
+
+        const body = {
+
+            name:event.target[0].value,
+            bread:event.target[1].value,
+            species:event.target[2].value,
+            avatar_url:event.target[3].value
+ 
+  
+        }
+
+        await editarPet(body, id)
 
     })
 
