@@ -1,65 +1,47 @@
 
-.toastCadastro{
-    display: none;
-    width: 320px;
-    height: 190px;
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid black;
-    padding: 15px;
-    flex-direction: column;
-    position: absolute;
-    top: 70%;
-    right: 5%;
-    animation: modalAbrir 1.5s ease;
-    border-radius: 16px;
-}
-
-
-.toastCadastro img{
-    width: 70px;
-    height: 70px;
-}
-
-.area-ir-login{
-    margin-top: 15px;
-}
-
-.area-ir-login button{
-    border: none;
-    background-color: transparent;
-    color: var(--cor-primaria);
-    font-size: 22px;
-    text-align: center;
-
-}
-
-.area-ir-login button:hover{
-    text-decoration: underline;
-}
-
-.area-ir-login button span{
-    color: black;
-    font-size: 19px;
-}
-
-.toast-aparecer{
+.toast-container {
+    font-family: "Inter, sans-serif";
+    position: fixed;
     display: flex;
+    justify-items: flex-end;
+    align-items: center;
+    gap: 10px;
+    width: 300px;
+    padding: 10px;
+    background-color: #fff;
+    color: var(--cor-primaria);
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px var(--cor-primaria);
+    animation: toastIt 4000ms ease-in forwards;
 }
 
-
-@keyframes modalAbrir{
-    0%{
-        opacity: 0;
-        transform: translateY(-50%);
-        
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-        
-        }
+@keyframes toastIt {
+    0%   {right: 30px; bottom:-100px}
+    25%  {right: 30px; bottom:10px}
+    50%  {right: 30px; bottom:10px}
+    100% {right: 30px; bottom:-100px}
 }
 
+.toast-container > img {
+    width: 44px;
+}
 
+.successToast {
+    border: 2px solid #fff;
+    background-color: #fff;
+}
+
+.toast-container > div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.toast-container > div > h3 {
+    color: var(--cor-primaria);
+}
+
+.red-toast{
+    color: red;
+
+}
