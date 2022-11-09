@@ -46,7 +46,7 @@ export async function editarPerfilUsuario(body) {
 
             return window.location.reload()
 
-        } 
+        }
     }
     catch (err) {
 
@@ -69,14 +69,14 @@ export async function cadastroPet(body) {
             },
             body: JSON.stringify(body)
         })
-        
+
         if (request.ok) {
 
             const response = await request.json()
 
             return window.location.reload()
 
-        } 
+        }
     }
     catch (err) {
 
@@ -112,4 +112,31 @@ export async function editarPet(body, id) {
         .then(res => res.json())
         .then(res => console.log(res))
 
+}
+
+export async function deletarPet(id) {
+
+    console.log(id)
+
+    try {
+        const request = await fetch(`https://m2-api-adot-pet.herokuapp.com/pets/${id}`, {
+            method: "DELETE",
+            headers: {
+                "Authorization": `Bearer ${localStorage.getItem("userToken")}`,
+            },
+        })
+
+        if (request.ok) {
+
+            const response = await request.json()
+
+            return window.location.reload()
+
+        }
+    }
+    catch (err) {
+
+        console.log(err)
+
+    }
 }

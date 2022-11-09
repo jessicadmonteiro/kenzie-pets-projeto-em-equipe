@@ -226,7 +226,7 @@ body .info-usuarios{
 .info-pets span{
     color: var(--cor-secundario);
 }
-.atulizar-pet{
+.atualizar-pet{
     font-weight: 600;
     font-size: 1rem;
     font-family: var(--fonte-texto);
@@ -285,4 +285,13 @@ footer>p {
     font-size: 25px;
     color: var(--cor-secundario);
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.529);
+}
+
+.div-botoes-att-delete{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+
 }

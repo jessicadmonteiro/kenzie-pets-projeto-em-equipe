@@ -121,9 +121,12 @@ export function modalCadastro() {
     botaoFechar.classList.add("fechar-modal")
     botaoFechar.innerText = "X"
 
-    botaoFechar.addEventListener("click", () => {
+    botaoFechar.addEventListener("click", (event) => {
+
+        event.preventDefault()
+
         let modalMaior = document.querySelector(".modal-cadastro-fundo")
-        modalMaior.classList.toggle("show-modal")
+        modalMaior.classList.remove("modal-fechar")
     })
     
     divForm.append(formulario, botaoIrLogin)
