@@ -107,7 +107,7 @@ async function renderizarAdocoesHomeLogado () {
             listarAdocao (animais)
         }
         else{
-            let novoArray = animais.filter((element) => element.pet.species === especie)
+            let novoArray = animais.filter((element) => element.species === especie)
             console.log(novoArray)
             listarAdocao (novoArray)
         }
