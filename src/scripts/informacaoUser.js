@@ -2,10 +2,10 @@ import { eventEditarPet } from "./requisition.js";
 
 export { usuario }
 
-const usuario = async () => {
+const usuario = async (token)=>{
 
-  const loading = document.querySelector(".carregando")
-  loading.classList.add("carregando-on")
+    const loading = document.querySelector(".carregando")
+    loading.classList.add("carregando-on")
 
   const user = await fetch("https://m2-api-adot-pet.herokuapp.com/users/profile", {
     method: "GET",
