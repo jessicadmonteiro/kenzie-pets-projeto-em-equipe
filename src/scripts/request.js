@@ -60,7 +60,8 @@ export async function cadastroPet(body) {
     console.log(body)
 
     try {
-
+        const loading = document.querySelector(".carregando")
+        loading.classList.add("carregando-on")
         const request = await fetch("https://m2-api-adot-pet.herokuapp.com/pets", {
             method: "POST",
             headers: {
@@ -98,7 +99,7 @@ export async function deletarUsuario() {
 }
 
 export async function editarPet(body, id) {
-
+    
     console.log(body, id)
 
     await fetch(`https://m2-api-adot-pet.herokuapp.com/pets/${id}`, {
