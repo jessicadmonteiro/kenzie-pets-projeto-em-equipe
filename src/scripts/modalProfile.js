@@ -142,7 +142,7 @@ export function petAtualizar() {
     divModalCadastro.classList.add("modal-cadastro")
 
     let formulario = document.createElement("form")
-    formulario.classList.add("form-cadastro")
+    formulario.classList.add("form-cadastro-att")
     formulario.id = "form-editar-pet"
 
     let tagH3 = document.createElement("h3")
