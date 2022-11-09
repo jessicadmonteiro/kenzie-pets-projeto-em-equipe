@@ -1,5 +1,5 @@
 async function adocao () {
-    const tokenAcesso = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njc2ODYzMDksImV4cCI6MTY2ODI5MTEwOSwic3ViIjoiYTI1YjAxZmEtZWFmNS00NDExLWFiZDktOTJkNTJjODQzZjg3In0.c9y8SCMeFiuIqms0U2a1IWruh0A6NPoqMqcHCo-4ubw"
+    const tokenAcesso = localStorage.getItem("userToken")
 
     try {
         let request = await fetch ("https://m2-api-adot-pet.herokuapp.com/adoptions", {
@@ -116,3 +116,17 @@ async function seletorHome () {
     });
 }
 seletorHome ()
+
+function logoutPaginaHomeLogado(){
+    const buttonLogout = document.querySelector(".botao-logout")
+    const carregando = document.querySelector(".carregando")
+
+    buttonLogout.addEventListener("click", (e)=>{
+        localStorage.removeItem("userToken")
+        carregando.classList.add("carregando-on")
+        setTimeout(() => {
+            window.location.href = './../../../index.html'
+        }, 3000);
+    })
+}
+logoutPaginaHomeLogado()

@@ -27,15 +27,23 @@
     animation: modalAbrir 1.5s ease;
 }
 
-.form-login{
+.divFormLogin{
     display: flex;
-    flex-direction: column;
     background-color: var(--fundo-main);
     width: 100%;
     padding: 20px;
     justify-content: center;
     align-items: center;
     height: 100%;
+    flex-direction: column;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
 }
 
 
@@ -78,6 +86,8 @@
     border: none;
     color: var(--cor-primaria);
     font-weight: 700;
+    font-size: 15px;
+    margin-top: 5px;
 }
 .ir-cadastro:hover{
     text-decoration: underline;
@@ -168,16 +178,23 @@
     position: relative;
     animation: modalAbrir 1.5s ease;
 }
-
-.form-cadastro{
-    display: flex;
-    flex-direction: column;
-    background-color: var(--fundo-main);
+.divFormCadastro{
     width: 100%;
     padding: 20px;
     justify-content: center;
     align-items: center;
     height: 100%;
+    background-color: var(--fundo-main);
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+}
+.form-cadastro{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-cadastro-att{
@@ -242,20 +259,22 @@
     background-color: var(--cor-primaria);
     color: var(--fundo-main);
     font-size: 20px;
+
 }
 .form-cadastro span{
     margin-top: 20px;
     font-size: 15px;
 }
 
-.ir-cadastro{
+.ir-login{
     background-color: transparent;
     border: none;
     color: var(--cor-primaria);
     font-weight: 700;
     font-size: 15px;
+    margin-top: 5px;
 }
-.ir-cadastro:hover{
+.ir-login:hover{
     text-decoration: underline;
 }
 .fechar-modal{
@@ -350,16 +369,6 @@
     font-size: 15px;
 }
 
-.ir-cadastro{
-    background-color: transparent;
-    border: none;
-    color: var(--cor-primaria);
-    font-weight: 700;
-    font-size: 15px;
-}
-.ir-cadastro:hover{
-    text-decoration: underline;
-}
 .fechar-modal{
     position: absolute;
     right: 30px;
