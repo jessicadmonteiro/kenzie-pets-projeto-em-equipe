@@ -7,11 +7,27 @@ const botaoAtualizar = document.querySelector(".botao-atulizar-perfil")
 botaoAtualizar.addEventListener("click", (e) => {
     let modalMaior = document.querySelector(".modal-cadastro-fundo")
     modalMaior.classList.toggle("show-modal")
+
+    const tagName = document.querySelector("#name")
+        
+    const tagUrl = document.querySelector("#avatar_url")
+
+    const imgPerfil = document.querySelector("#img-perfil")
+
+    console.log(imgPerfil.src)
+
+    const namePerfil = document.querySelector("#name-perfil")
+
+    console.log(namePerfil.innerText.substr(5))
+
+
+    tagName.value = namePerfil.innerText.substr(5)
+
+    tagUrl.value = imgPerfil.src
+    
 })
 
 export function atualizarPerfil() {
-
-
 
     let divSuperiorModal = document.createElement("div")
     divSuperiorModal.classList.add("modal-cadastro-fundo")
@@ -37,7 +53,6 @@ export function atualizarPerfil() {
     inputNome.type = "text"
     inputNome.id = "name"
 
-
     let botaoCadastrar = document.createElement("button")
     botaoCadastrar.classList.add("botao-cadastro")
     botaoCadastrar.innerText = "Atualizar"
@@ -45,9 +60,6 @@ export function atualizarPerfil() {
     let botaoIrLogin = document.createElement("button")
     botaoIrLogin.innerText = "clicando aqui."
     botaoIrLogin.classList.add("ir-cadastro")
-
-    let tagSpan = document.createElement("span")
-    tagSpan.innerText = "Ja tem cadastro? Faça o login "
 
     let botaoFechar = document.createElement("button")
     botaoFechar.classList.add("fechar-modal")
@@ -58,8 +70,7 @@ export function atualizarPerfil() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar, tagSpan)
-    tagSpan.appendChild(botaoIrLogin)
+    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
@@ -186,7 +197,11 @@ export function petAtualizar() {
 
     botaoFechar.addEventListener("click", () => {
         let modalMaior = document.querySelector(".modal-atualizar-pet-fundo-att")
+
         modalMaior.classList.remove("modal-abrir")
+
+        location.reload()
+        
     })
 
     formulario.append(tagH3, inputNome, inputRaca, inputEsp, inputAvatar, botaoCadastrar)
@@ -224,7 +239,10 @@ export function deletarConta() {
     botaoDeletar.classList.add("botao-deletarConta")
     botaoDeletar.innerText = "Quero deletar minha conta"
 
-
+    botaoManter.addEventListener("click", () => {
+        let modalMaior = document.querySelector(".modal-removePerfil-fundo")
+        modalMaior.classList.toggle("show-modal")
+    })
     
     botaoDeletar.addEventListener("click", async () => {
 
