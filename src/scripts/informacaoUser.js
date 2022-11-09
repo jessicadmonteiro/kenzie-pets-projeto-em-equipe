@@ -51,19 +51,24 @@ const usuario = async (token)=>{
                   <p><span>Nome:</span> ${element.name}</p>
                   <p><span>Espécie:</span> ${element.species}</p>
                   <p><span>Adotável:</span> ${adotavel}</p>
-                  <button class="atulizar-pet">Atualizar</button>
+                  <button class="atualizar-pet">Atualizar</button>
                 </div>
                 `
       mainUl.appendChild(li)
       console.log(element)
 
-      const botaoAtualizarPet = document.querySelector(".atulizar-pet")
+      const botaoAtualizarPet = document.querySelector(".atualizar-pet")
 
       botaoAtualizarPet.addEventListener("click", (e) => {
+        
+        console.log("click")
+
+        let modalAttPet = document.querySelector(".modal-atualizar-pet-fundo-att")
+
+        modalAttPet.classList.add("modal-abrir")
   
-        let modalMaiorAttPet = document.querySelector(".modal-atualizar-pet-fundo")
         eventEditarPet(element.id)
-        modalMaiorAttPet.classList.toggle("show-modal")
+
       })
 
     });
