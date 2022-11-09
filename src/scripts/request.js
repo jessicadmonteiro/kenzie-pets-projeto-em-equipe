@@ -1,3 +1,5 @@
+import { toast } from "./toast.js"
+
 export async function getLogin(body) {
 
 
@@ -130,7 +132,14 @@ export async function deletarPet(id) {
 
             const response = await request.json()
 
-            return window.location.reload()
+            toast("Sucesso!", "O seu pet saiu da Adoção")
+
+            setTimeout(() => {
+                
+                return window.location.reload()
+    
+            }, 4000)
+
 
         }
     }
