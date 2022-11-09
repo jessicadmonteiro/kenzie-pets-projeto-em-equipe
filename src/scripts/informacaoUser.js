@@ -2,10 +2,10 @@ import { eventEditarPet } from "./requisition.js";
 
 export { usuario }
 
-const usuario = async (token)=>{
+const usuario = async () => {
 
-    const loading = document.querySelector(".carregando")
-    loading.classList.add("carregando-on")
+  const loading = document.querySelector(".carregando")
+  loading.classList.add("carregando-on")
 
   const user = await fetch("https://m2-api-adot-pet.herokuapp.com/users/profile", {
     method: "GET",
@@ -15,7 +15,7 @@ const usuario = async (token)=>{
     }
   });
   const userJson = await user.json();
-
+  console.log(userJson)
 
   const fotoPerfil = document.querySelector(".img-perfil")
   fotoPerfil.src = userJson.avatar_url
@@ -32,8 +32,6 @@ const usuario = async (token)=>{
 
   if (userJson.my_pets.length > 0) {
     mainUl.innerHTML = ""
-
-    console.log(userJson.my_pets)
     userJson.my_pets.forEach(element => {
       let adotavel = ""
 
@@ -47,10 +45,27 @@ const usuario = async (token)=>{
       const li = document.createElement("li")
       li.classList.add("pet")
 
+      li.innerHTML = `
+                <img src="${element.avatar_url}" alt="">
+                <div class="info-pets">
+                  <p><span>Nome:</span> ${element.name}</p>
+                  <p><span>Espécie:</span> ${element.species}</p>
+                  <p><span>Adotável:</span> ${adotavel}</p>
+                  <button class="atualizar-pet">Atualizar</button>
+                </div>
+                `
       mainUl.appendChild(li)
+      console.log(element)
 
+      const botaoAtualizarPet = document.querySelector(".atualizar-pet")
 
+      botaoAtualizarPet.addEventListener("click", (e) => {
+        
+        console.log("click")
 
+        let modalAttPet = document.querySelector(".modal-atualizar-pet-fundo-att")
+
+        modalAttPet.classList.add("modal-abrir")
   
         eventEditarPet(element.id)
 
@@ -58,7 +73,6 @@ const usuario = async (token)=>{
 
     });
   }
-
 
   fotoPerfil.addEventListener("click", () => {
     const editarPerfil = document.querySelector(".info-usuarios")
