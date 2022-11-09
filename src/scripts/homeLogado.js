@@ -36,7 +36,7 @@ async function meAdote () {
     }
     
 }
-
+meAdote () 
 
 async function renderizarAdocoesHomeLogado () {
     let animais = await adocao ()
@@ -90,32 +90,6 @@ async function renderizarAdocoesHomeLogado () {
     
 }
 renderizarAdocoesHomeLogado ()
-
-async function seletorHome () {
-    let animais = await adocao ()
-
-    let containerSeletor = document.querySelector("#selecionar_especie")
-    containerSeletor.innerHTML = ""
-
-    let tagOption       = document.createElement("option")
-    tagOption.innerText = "Selecionar espécie"
-    containerSeletor.appendChild(tagOption)
-
-    animais.forEach(element => {
-
-        let setor = element.pet.species
-        let id    = element.pet.id
-
-        let tagOption = document.createElement("option")
-
-        tagOption.id        = id
-        tagOption.innerText = setor
-
-        containerSeletor.appendChild(tagOption)
-        
-    });
-}
-seletorHome ()
 
 function logoutPaginaHomeLogado(){
     const buttonLogout = document.querySelector(".botao-logout")
