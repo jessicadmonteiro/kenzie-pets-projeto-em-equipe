@@ -5,11 +5,10 @@ export function eventLogin () {
 
     const local = document.querySelector(".form-login")
 
+    
     local.addEventListener("submit", async (event) => {
 
         event.preventDefault()
-
-        console.log(event)
 
         const body = {
 
