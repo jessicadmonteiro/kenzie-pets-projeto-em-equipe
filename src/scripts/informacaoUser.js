@@ -1,4 +1,4 @@
-import { atualizarPerfil } from "./modalProfile.js";
+import { deletarPet } from "./request.js";
 import { eventEditarPet } from "./requisition.js";
 
 export { usuario }
@@ -50,22 +50,34 @@ const usuario = async () => {
       const div = document.createElement("div")
       div.classList.add("info-pets")
 
+      const divBotoes = document.createElement("div")
+      divBotoes.classList.add("div-botoes-att-delete")
+
       const p1 = document.createElement("p")
       const p2 = document.createElement("p")
       const p3 = document.createElement("p")
       const buttonAtulizar = document.createElement("button")
+      const buttonDeletar = document.createElement("button")
       buttonAtulizar.classList.add("atualizar-pet")
+      buttonDeletar.classList.add("botao-deletar-perfil")
 
       img.src = element.avatar_url
       p1.innerHTML = `<span>Nome:</span> ${element.name}`
       p2.innerHTML = `<span>Espécie:</span> ${element.species}`
       p3.innerHTML = `<span>Adotável:</span> ${adotavel}`
       buttonAtulizar.innerText = "Atualizar"
+      buttonDeletar.innerText = "Deletar"
 
       mainUl.appendChild(li)
       li.append(img,div)
-      div.append(p1,p2,p3,buttonAtulizar)
+      div.append(p1,p2,p3, divBotoes)
+      divBotoes.append(buttonAtulizar, buttonDeletar)
       console.log(element)
+
+      buttonDeletar.addEventListener("click", () => {
+
+        deletarPet(element.id)
+      })
 
 
       buttonAtulizar.addEventListener("click", (e) => {
