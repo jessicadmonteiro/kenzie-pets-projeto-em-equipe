@@ -81,3 +81,72 @@ footer>p {
     font-size: 0.75rem;
     color: var(--cor-primaria);
 }
+
+@media(max-width: 1078px){
+    #selecionar_especie {
+        width: 180px;
+    }
+
+    ul {
+        gap: 15px;
+    }
+}
+
+@media(max-width: 746px) {
+    #selecionar_especie {
+        width: 150px;
+        font-size: 10px;
+    }
+
+    li {
+        width: 150px;
+    }
+
+    li>h3 {
+        font-size: 16px;
+    }
+
+    li>p {
+        font-size: 10px;
+    }
+
+    .botao_me_adota {
+        width: 75px;
+        font-size: 10px;
+    }
+
+}
+
+@media(max-width: 561px) {
+    ul {
+        gap: 20px;
+    }
+}
+
+@media(max-width: 533px){
+    li {
+        width: 270px;
+        height: 160px;
+        display: flex;
+    }
+
+    li> img {
+        width: 50%;
+    }
+
+    li>h3 {
+        width: 110px;
+        height: 40px;
+        margin-top: 10px;
+        margin-left: 10px;
+        
+    }
+
+    li>p {
+        width: 110px;
+        height: 21px;
+        margin-top: 55px;
+        margin-left: -95px;
+        padding: 0;
+    }
+}

@@ -11,6 +11,8 @@ botaoAtualizar.addEventListener("click", (e) => {
 
 export function atualizarPerfil() {
 
+
+
     let divSuperiorModal = document.createElement("div")
     divSuperiorModal.classList.add("modal-cadastro-fundo")
 
@@ -152,21 +154,25 @@ export function petAtualizar() {
     inputNome.classList.add("input-geral")
     inputNome.placeholder = "Nome"
     inputNome.type = "text"
+    inputNome.id ="pet-nome"
 
     let inputRaca = document.createElement("input")
     inputRaca.classList.add("input-geral")
     inputRaca.placeholder = "Raça"
     inputRaca.type = "text"
+    inputRaca.id = "pet-raca"
 
     let inputEsp = document.createElement("input")
     inputEsp.classList.add("input-geral")
     inputEsp.placeholder = "Espécie"
     inputEsp.type = "text"
+    inputEsp.id = "pet-esp"
 
     let inputAvatar = document.createElement("input")
     inputAvatar.classList.add("input-geral")
     inputAvatar.placeholder = "Avatar?"
     inputAvatar.type = "url"
+    inputAvatar.id = "pet-url"
 
     let botaoCadastrar = document.createElement("button")
     botaoCadastrar.classList.add("botao-cadastro")
@@ -223,6 +229,8 @@ export function deletarConta() {
     let botaoDeletar = document.createElement("button")
     botaoDeletar.classList.add("botao-deletarConta")
     botaoDeletar.innerText = "Quero deletar minha conta"
+
+
     
     botaoDeletar.addEventListener("click", async () => {
 
