@@ -136,7 +136,7 @@ export function petCadastro() {
 export function petAtualizar() {
 
     let divSuperiorModal = document.createElement("div")
-    divSuperiorModal.classList.add("modal-atualizar-pet-fundo")
+    divSuperiorModal.classList.add("modal-atualizar-pet-fundo-att")
 
     let divModalCadastro = document.createElement("div")
     divModalCadastro.classList.add("modal-cadastro")
@@ -184,8 +184,8 @@ export function petAtualizar() {
     botaoFechar.innerText = "X"
 
     botaoFechar.addEventListener("click", () => {
-        let modalMaior = document.querySelector(".modal-atualizar-pet-fundo")
-        modalMaior.classList.toggle("show-modal")
+        let modalMaior = document.querySelector(".modal-atualizar-pet-fundo-att")
+        modalMaior.classList.remove("modal-abrir")
     })
 
     formulario.append(tagH3, inputNome, inputRaca, inputEsp, inputAvatar, botaoCadastrar, tagSpan)

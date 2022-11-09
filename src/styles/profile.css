@@ -226,7 +226,7 @@ body .info-usuarios{
 .info-pets span{
     color: var(--cor-secundario);
 }
-.atulizar-pet{
+.atualizar-pet{
     font-weight: 600;
     font-size: 1rem;
     font-family: var(--fonte-texto);
