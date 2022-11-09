@@ -1,3 +1,4 @@
+import { atualizarPerfil } from "./modalProfile.js";
 import { eventEditarPet } from "./requisition.js";
 
 export { usuario }
@@ -75,6 +76,22 @@ const usuario = async () => {
         modalAttPet.classList.add("modal-abrir")
   
         eventEditarPet(element.id)
+
+        const inputN = document.querySelector("#pet-nome")
+
+        inputN.value = `${element.name}`
+
+        const inputR = document.querySelector("#pet-raca")
+
+        inputR.value = `${element.bread}`
+
+        const inputE = document.querySelector("#pet-esp")
+
+        inputE.value = `${element.species}`
+
+        const inputU = document.querySelector("#pet-url")
+
+        inputU.value = `${element.avatar_url}`
 
       })
 
