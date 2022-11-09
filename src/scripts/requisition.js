@@ -74,7 +74,7 @@ export async function eventEditarPet(id) {
     local.addEventListener("submit", async (event) => {
 
         event.preventDefault()
-
+        
         const body = {
 
             name:event.target[0].value,
