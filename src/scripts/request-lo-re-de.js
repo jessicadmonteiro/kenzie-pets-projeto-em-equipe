@@ -12,11 +12,9 @@ export async function cadastroRequisition(body){
         if (request.ok) {
 
             const response = await request.json()
-
-            // window.location.replace("./src/pages/homeLogado/index.html")
-            
-            return response
-        }
+           
+               return response
+            }
     }
     catch (err) {
 
@@ -29,10 +27,8 @@ export function eventCadastro () {
     const local = document.querySelector(".form-cadastro")
 
     local.addEventListener("submit", async (event) => {
-        console.log(event)
-        event.preventDefault()
 
-        
+        event.preventDefault()
 
         const body = {
 
@@ -44,6 +40,6 @@ export function eventCadastro () {
         }
 
         await cadastroRequisition(body)
-        location.reload()
+ 
     })
 }
