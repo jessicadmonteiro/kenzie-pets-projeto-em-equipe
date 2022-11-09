@@ -293,7 +293,7 @@
 .ir-login:hover{
     text-decoration: underline;
 }
-.fechar-modal{
+.fechar-modal-cadastro{
     position: absolute;
     right: 30px;
     top: 10px;
