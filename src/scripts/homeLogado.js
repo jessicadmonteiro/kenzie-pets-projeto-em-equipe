@@ -82,15 +82,13 @@ async function renderizarAdocoesHomeLogado () {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
-                            "Authorization": `Bearer ${tokenAcesso}`
+                            "Authorization": `Bearer ${localStorage.getItem("userToken")}`
                         },
                         body: JSON.stringify(idPet)
                     })
                     const adotarPetJson = await adotarPet.json()
     
-                    console.log(adotarPetJson)
-    
-                    console.log(element.id)
+                    location.reload()
                 }catch (err) {
                     console.log(err)
                 }
