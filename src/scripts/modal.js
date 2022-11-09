@@ -105,6 +105,11 @@ export function modalCadastro() {
     let botaoCadastrar = document.createElement("button")
     botaoCadastrar.classList.add("botao-cadastro")
     botaoCadastrar.innerText = "Cadastrar"
+    botaoCadastrar.addEventListener("click", (e) => {
+        let modalMaior = document.querySelector(".modal-cadastro-fundo")
+        modalMaior.classList.remove("show-modal")
+        })
+ 
 
     let botaoIrLogin = document.createElement("button")
     botaoIrLogin.innerText = "Ja tem cadastro? Faça o login clicando aqui."
