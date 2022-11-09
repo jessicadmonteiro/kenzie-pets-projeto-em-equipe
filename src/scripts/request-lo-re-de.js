@@ -14,6 +14,7 @@ export async function cadastroRequisition(body){
             const response = await request.json()
 
             // window.location.replace("./src/pages/homeLogado/index.html")
+            
             return response
         }
     }

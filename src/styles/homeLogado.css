@@ -36,7 +36,6 @@ li {
     height: 17rem;
     box-shadow: 0px 0px 5px var(--borda-card);
     border-radius: 4px;
-    border-radius: 4px;
 }
 
 li>img {
@@ -46,13 +45,14 @@ li>img {
 }
 
 li>h3 {
+    font-size: 1.5rem;
     color: var(--cor-primaria);
     padding: 0.625rem;
 }
 
 li>p {
     font-weight: 600;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
     color: var(--cinza-normal);
     padding-left: 0.625rem;
 }
@@ -82,5 +82,25 @@ footer>p {
     border: transparent;
     border-radius: 1rem;
     margin-left: 25%;
-    margin-top: 0.625rem;
+    margin-top: 0.5rem;
+    
+}
+
+.botao_me_adota:hover {
+    color: var(--verde-confirmar);
+    background-color: #ffff;
+    border: solid 1px var(--verde-confirmar);
+}
+
+#selecionar_especie {
+    position: absolute;
+    top: 8rem;
+    right: 21.875rem;
+    width: 200px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 16px;
+    border: solid 1px var(--cor-primaria);
+    color: var(--cor-primaria);
+    outline: none;
 }
