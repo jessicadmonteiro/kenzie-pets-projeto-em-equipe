@@ -47,36 +47,13 @@ const usuario = async (token)=>{
       const li = document.createElement("li")
       li.classList.add("pet")
 
-      const img = document.createElement("img")
-      const div = document.createElement("div")
-      div.classList.add("info-pets")
-      
-      const p1 = document.createElement("p")
-      const p2 = document.createElement("p")
-      const p3 = document.createElement("p")
-      const buttonAtulizar = document.createElement("button")
-      buttonAtulizar.classList.add("atulizar-pet")
-
-      img.src = element.avatar_url
-
-      p1.innerHTML = `<span>Nome:</span> ${element.name}`
-      p2.innerHTML = `<span>Espécie:</span> ${element.species}`
-      p3.innerHTML = `<span>Adotável:</span> ${adotavel}`
-      buttonAtulizar.innerText = "Atualizar"
-
       mainUl.appendChild(li)
-      li.append(img, div)
-      div.append(p1, p2, p3, buttonAtulizar)
 
-      
 
-      buttonAtulizar.addEventListener("click", (e) => {
+
   
-        let modalMaiorAttPet = document.querySelector(".modal-atualizar-pet-fundo")
         eventEditarPet(element.id)
-        console.log(element.id)
-        modalMaiorAttPet.classList.toggle("show-modal")
-        
+
       })
 
     });
