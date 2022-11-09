@@ -1,3 +1,5 @@
+import {filtropets} from "./filtropets.js"
+
 async function adocao () {
     const tokenAcesso = localStorage.getItem("userToken")
 
@@ -39,17 +41,17 @@ async function meAdote () {
 meAdote () 
 
 async function renderizarAdocoesHomeLogado () {
-    let animais = await adocao ()
+    let animais = await filtropets ()
 
     function listarAdocao (arr) {
         let tagUl = document.querySelector("ul")
         tagUl.innerHTML = ""
 
         arr.forEach(element => {
-            let imagem  = element.pet.avatar_url
-            let nome    = element.pet.name
-            let especie = element.pet.species
-            let id      = element.pet.id
+            let imagem  = element.avatar_url
+            let nome    = element.name
+            let especie = element.species
+            let id      = element.id
 
             let tagLi     = document.createElement("li")
             let tagImg    = document.createElement("img")
@@ -68,6 +70,30 @@ async function renderizarAdocoesHomeLogado () {
 
             tagLi.append(tagImg, tagH3, tagP, tagButton)
             tagUl.appendChild(tagLi)
+
+            tagButton.addEventListener("click",async ()=>{ 
+
+                try {
+                    const idPet = {
+                        "pet_id": element.id
+                    } 
+    
+                    let adotarPet = await fetch ("https://m2-api-adot-pet.herokuapp.com/adoptions", {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "Authorization": `Bearer ${localStorage.getItem("userToken")}`
+                        },
+                        body: JSON.stringify(idPet)
+                    })
+                    const adotarPetJson = await adotarPet.json()
+    
+                    location.reload()
+                }catch (err) {
+                    console.log(err)
+                }
+  
+            })
 
         });
     }

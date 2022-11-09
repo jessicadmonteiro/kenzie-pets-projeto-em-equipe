@@ -13,6 +13,9 @@ async function adocao () {
     const tokenAcesso = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2Njc2ODYzMDksImV4cCI6MTY2ODI5MTEwOSwic3ViIjoiYTI1YjAxZmEtZWFmNS00NDExLWFiZDktOTJkNTJjODQzZjg3In0.c9y8SCMeFiuIqms0U2a1IWruh0A6NPoqMqcHCo-4ubw"
 
     try {
+        const loading = document.querySelector(".carregando")
+        loading.classList.add("carregando-on")
+
         let request = await fetch ("https://m2-api-adot-pet.herokuapp.com/adoptions", {
             method: "GET",
             headers: {
@@ -21,6 +24,7 @@ async function adocao () {
             }
         })
         const response = await request.json()
+        loading.classList.remove("carregando-on")
         return response
     }catch (err) {
         console.log(err)
