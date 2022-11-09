@@ -1,7 +1,8 @@
 export {usuario}
 
-const usuario = async (token)=>{
-
+const usuario = async ()=>{
+  
+    const token = localStorage.getItem("userToken")
     const loading = document.querySelector(".carregando")
     loading.classList.add("carregando-on")
 

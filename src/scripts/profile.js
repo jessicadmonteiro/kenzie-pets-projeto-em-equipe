@@ -17,6 +17,4 @@ cadastrarPet()
 
 autorizacao()
 
-const token = localStorage.getItem("userToken")
-
-usuario (token)
+usuario ()

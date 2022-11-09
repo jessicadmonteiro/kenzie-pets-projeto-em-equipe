@@ -67,7 +67,7 @@ export async function cadastroPet(body) {
             },
             body: JSON.stringify(body)
         })
-
+        
         if (request.ok) {
 
             const response = await request.json()
