@@ -230,7 +230,7 @@ export function deletarConta() {
     botaoDeletar.classList.add("botao-deletarConta")
     botaoDeletar.innerText = "Quero deletar minha conta"
 
-    botaoManter.addEventListener("click", )
+
     
     botaoDeletar.addEventListener("click", async () => {
 
