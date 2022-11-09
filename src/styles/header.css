@@ -7,6 +7,7 @@ header{
     margin: 5px auto;
     padding: 0 50px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 5px 10px -5px;
 }
 #hamburguer{
     margin-left: 15px;
@@ -50,18 +51,36 @@ header{
     border-radius: 16px;
     cursor: pointer;
     font-family: var(--fonte-texto);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease 0s;
 }
+.ancora-header:hover{
+    background-color: var(--cor-primaria);
+    box-shadow: 0px 15px 20px var(--cor-primaria);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
 .botao-logout{
     padding: 4px 24px;
     font-weight: 600;
     font-size: 1rem;
-    background-color: var(--cor-primaria);
+    background-color: white;
     border: 1.5px solid var(--cor-primaria);
-    color: white;
+    color: var(--cor-primaria);
     border-radius: 16px;
     cursor: pointer;
     font-family: var(--fonte-texto);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease 0s;
 }
+.botao-logout:hover{
+    background-color: var(--cor-primaria);
+    box-shadow: 0px 15px 20px var(--cor-primaria);
+    color: white;
+    transform: translateY(-3px);
+}
+
 @media(min-width: 750px){
     #hamburguer{
         display: none;

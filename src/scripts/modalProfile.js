@@ -46,9 +46,6 @@ export function atualizarPerfil() {
     botaoIrLogin.innerText = "clicando aqui."
     botaoIrLogin.classList.add("ir-cadastro")
 
-    let tagSpan = document.createElement("span")
-    tagSpan.innerText = "Ja tem cadastro? Faça o login "
-
     let botaoFechar = document.createElement("button")
     botaoFechar.classList.add("fechar-modal")
     botaoFechar.innerText = "X"
@@ -58,8 +55,7 @@ export function atualizarPerfil() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar, tagSpan)
-    tagSpan.appendChild(botaoIrLogin)
+    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
