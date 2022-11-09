@@ -70,8 +70,7 @@ export function atualizarPerfil() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar, tagSpan)
-    tagSpan.appendChild(botaoIrLogin)
+    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
