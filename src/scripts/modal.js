@@ -24,13 +24,11 @@ export function modalLogin() {
     inputEmail.classList.add("input-geral")
     inputEmail.placeholder = "Email"
     inputEmail.type = "email"
-    inputEmail.value = "email"
 
     let inputSenha = document.createElement("input")
     inputSenha.classList.add("input-geral")
     inputSenha.placeholder = "Password"
     inputSenha.type = "password"
-    inputSenha.value = "password"
 
     let botaoLogin = document.createElement("button")
     botaoLogin.classList.add("botao-login")

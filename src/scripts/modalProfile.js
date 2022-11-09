@@ -1,3 +1,6 @@
+import { deletarUsuario } from "./request.js"
+import {usuario} from "./informacaoUser.js"
+
 const body = document.querySelector("body")
 const botaoAtualizar = document.querySelector(".botao-atulizar-perfil")
 
@@ -20,25 +23,18 @@ export function atualizarPerfil() {
     let tagH3 = document.createElement("h3")
     tagH3.innerText = "Atualizar Perfil"
 
-    let inputNome = document.createElement("input")
-    inputNome.classList.add("input-geral")
-    inputNome.placeholder = "Nome"
-    inputNome.type = "text"
-
-    let inputEmail = document.createElement("input")
-    inputEmail.classList.add("input-geral")
-    inputEmail.placeholder = "E-mail"
-    inputEmail.type = "email"
-
-    let inputSenha = document.createElement("input")
-    inputSenha.classList.add("input-geral")
-    inputSenha.placeholder = "Password"
-    inputSenha.type = "password"
-
     let inputAvatar = document.createElement("input")
     inputAvatar.classList.add("input-geral")
     inputAvatar.placeholder = "Avatar?"
     inputAvatar.type = "url"
+    inputAvatar.id = "avatar_url"
+
+    let inputNome = document.createElement("input")
+    inputNome.classList.add("input-geral")
+    inputNome.placeholder = "Nome"
+    inputNome.type = "text"
+    inputNome.id = "name"
+
 
     let botaoCadastrar = document.createElement("button")
     botaoCadastrar.classList.add("botao-cadastro")
@@ -60,7 +56,7 @@ export function atualizarPerfil() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputNome, inputEmail, inputSenha, inputAvatar, botaoCadastrar, tagSpan)
+    formulario.append(tagH3, inputNome, inputAvatar, botaoCadastrar, tagSpan)
     tagSpan.appendChild(botaoIrLogin)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
@@ -85,6 +81,7 @@ export function petCadastro() {
 
     let formulario = document.createElement("form")
     formulario.classList.add("form-cadastro")
+    formulario.id = "form-cadastro-pet"
 
     let tagH3 = document.createElement("h3")
     tagH3.innerText = "Cadastrar Pet"
@@ -98,6 +95,11 @@ export function petCadastro() {
     inputEmail.classList.add("input-geral")
     inputEmail.placeholder = "Raça"
     inputEmail.type = "text"
+
+    let inputEsp = document.createElement("input")
+    inputEsp.classList.add("input-geral")
+    inputEsp.placeholder = "Espécie"
+    inputEsp.type = "text"
 
     let inputAvatar = document.createElement("input")
     inputAvatar.classList.add("input-geral")
@@ -124,20 +126,12 @@ export function petCadastro() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputNome, inputEmail, inputAvatar, botaoCadastrar, tagSpan)
+    formulario.append(tagH3, inputNome, inputEmail, inputEsp, inputAvatar, botaoCadastrar, tagSpan)
     tagSpan.appendChild(botaoIrLogin)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
 }
-
-const botaoAtualizarPet = document.querySelector(".atulizar-pet")
-
-botaoAtualizarPet.addEventListener("click", (e) => {
-    console.log("click")
-    let modalMaiorAttPet = document.querySelector(".modal-atualizar-pet-fundo")
-    modalMaiorAttPet.classList.toggle("show-modal")
-})
 
 export function petAtualizar() {
 
@@ -149,9 +143,25 @@ export function petAtualizar() {
 
     let formulario = document.createElement("form")
     formulario.classList.add("form-cadastro")
+    formulario.id = "form-editar-pet"
 
     let tagH3 = document.createElement("h3")
     tagH3.innerText = "Atualizar Pet"
+
+    let inputNome = document.createElement("input")
+    inputNome.classList.add("input-geral")
+    inputNome.placeholder = "Nome"
+    inputNome.type = "text"
+
+    let inputRaca = document.createElement("input")
+    inputRaca.classList.add("input-geral")
+    inputRaca.placeholder = "Raça"
+    inputRaca.type = "text"
+
+    let inputEsp = document.createElement("input")
+    inputEsp.classList.add("input-geral")
+    inputEsp.placeholder = "Espécie"
+    inputEsp.type = "text"
 
     let inputAvatar = document.createElement("input")
     inputAvatar.classList.add("input-geral")
@@ -178,7 +188,7 @@ export function petAtualizar() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputAvatar, botaoCadastrar, tagSpan)
+    formulario.append(tagH3, inputNome, inputRaca, inputEsp, inputAvatar, botaoCadastrar, tagSpan)
     tagSpan.appendChild(botaoIrLogin)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
@@ -213,6 +223,14 @@ export function deletarConta() {
     let botaoDeletar = document.createElement("button")
     botaoDeletar.classList.add("botao-deletarConta")
     botaoDeletar.innerText = "Quero deletar minha conta"
+    
+    botaoDeletar.addEventListener("click", async () => {
+
+        await deletarUsuario()
+
+        localStorage.removeItem("userToken")
+
+    })
 
     let botaoFechar = document.createElement("button")
     botaoFechar.classList.add("fechar-modal")

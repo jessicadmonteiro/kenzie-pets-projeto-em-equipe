@@ -1,11 +1,16 @@
 header{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     max-width: 100%;
     width: 100%;
     margin: 5px auto;
     padding: 0 50px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#hamburguer{
+    margin-left: 15px;
+    cursor: pointer;
 }
 .logo{
     display: flex;
@@ -26,10 +31,14 @@ header{
     color: #086fff;
 }
 .buttoes-header{
-    display: flex;
+    display: none;
     gap: 15px;
     justify-content: center;
     align-items: center;
+}
+.buttoes-header-on{
+    display: flex;
+    margin-bottom: 15px;
 }
 .ancora-header{
     padding: 4px 24px;
@@ -52,4 +61,17 @@ header{
     border-radius: 16px;
     cursor: pointer;
     font-family: var(--fonte-texto);
+}
+@media(min-width: 750px){
+    #hamburguer{
+        display: none;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    header{
+        flex-direction: row;
+    }
+    .buttoes-header{
+        display: flex;
+    }
 }
