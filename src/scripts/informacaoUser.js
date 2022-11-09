@@ -45,23 +45,30 @@ const usuario = async () => {
       const li = document.createElement("li")
       li.classList.add("pet")
 
-      li.innerHTML = `
-                <img src="${element.avatar_url}" alt="">
-                <div class="info-pets">
-                  <p><span>Nome:</span> ${element.name}</p>
-                  <p><span>Espécie:</span> ${element.species}</p>
-                  <p><span>Adotável:</span> ${adotavel}</p>
-                  <button class="atualizar-pet">Atualizar</button>
-                </div>
-                `
+      const img = document.createElement("img")
+      const div = document.createElement("div")
+      div.classList.add("info-pets")
+
+      const p1 = document.createElement("p")
+      const p2 = document.createElement("p")
+      const p3 = document.createElement("p")
+      const buttonAtulizar = document.createElement("button")
+      buttonAtulizar.classList.add("atualizar-pet")
+
+      img.src = element.avatar_url
+      p1.innerHTML = `<span>Nome:</span> ${element.name}`
+      p2.innerHTML = `<span>Espécie:</span> ${element.species}`
+      p3.innerHTML = `<span>Adotável:</span> ${adotavel}`
+      buttonAtulizar.innerText = "Atualizar"
+
       mainUl.appendChild(li)
+      li.append(img,div)
+      div.append(p1,p2,p3,buttonAtulizar)
       console.log(element)
 
-      const botaoAtualizarPet = document.querySelector(".atualizar-pet")
 
-      botaoAtualizarPet.addEventListener("click", (e) => {
+      buttonAtulizar.addEventListener("click", (e) => {
         
-        console.log("click")
 
         let modalAttPet = document.querySelector(".modal-atualizar-pet-fundo-att")
 
