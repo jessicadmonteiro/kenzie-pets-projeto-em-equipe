@@ -116,8 +116,6 @@ export function petCadastro() {
     botaoIrLogin.innerText = "clicando aqui."
     botaoIrLogin.classList.add("ir-cadastro")
 
-    let tagSpan = document.createElement("span")
-    tagSpan.innerText = "Ja tem cadastro? Faça o login "
 
     let botaoFechar = document.createElement("button")
     botaoFechar.classList.add("fechar-modal")
@@ -128,8 +126,7 @@ export function petCadastro() {
         modalMaior.classList.toggle("show-modal")
     })
 
-    formulario.append(tagH3, inputNome, inputEmail, inputEsp, inputAvatar, botaoCadastrar, tagSpan)
-    tagSpan.appendChild(botaoIrLogin)
+    formulario.append(tagH3, inputNome, inputEmail, inputEsp, inputAvatar, botaoCadastrar)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
@@ -182,8 +179,6 @@ export function petAtualizar() {
     botaoIrLogin.innerText = "clicando aqui."
     botaoIrLogin.classList.add("ir-cadastro")
 
-    let tagSpan = document.createElement("span")
-    tagSpan.innerText = "Ja tem cadastro? Faça o login "
 
     let botaoFechar = document.createElement("button")
     botaoFechar.classList.add("fechar-modal")
@@ -194,8 +189,7 @@ export function petAtualizar() {
         modalMaior.classList.remove("modal-abrir")
     })
 
-    formulario.append(tagH3, inputNome, inputRaca, inputEsp, inputAvatar, botaoCadastrar, tagSpan)
-    tagSpan.appendChild(botaoIrLogin)
+    formulario.append(tagH3, inputNome, inputRaca, inputEsp, inputAvatar, botaoCadastrar)
     divModalCadastro.append(formulario, botaoFechar)
     divSuperiorModal.appendChild(divModalCadastro)
     body.appendChild(divSuperiorModal)
