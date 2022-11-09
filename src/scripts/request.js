@@ -101,7 +101,11 @@ export async function deletarUsuario() {
 }
 
 export async function editarPet(body, id) {
+<<<<<<< HEAD
      try {
+=======
+    try {
+>>>>>>> 7f6367dba59454696dff23b59d782bb430c5df5b
     const request = await fetch(`https://m2-api-adot-pet.herokuapp.com/pets/${id}`, {
 
         method: "PATCH",
