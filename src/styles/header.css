@@ -1,0 +1,102 @@
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    width: 100%;
+    margin: 5px auto;
+    padding: 0 50px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#hamburguer{
+    margin-left: 15px;
+    cursor: pointer;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 90px;
+}
+.logo h1{
+    font-family: var(--fonte-texto);
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--cor-primaria);
+    text-shadow: -3px 2px 5px rgba(150, 150, 150, 0.68);
+}
+.logo span{
+    color: #086fff;
+}
+.buttoes-header{
+    display: none;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+.buttoes-header-on{
+    display: flex;
+    margin-bottom: 15px;
+}
+.ancora-header{
+    padding: 4px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1.5px solid var(--cor-primaria);
+    color: var(--cor-primaria);
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
+}
+.botao-logout{
+    padding: 4px 24px;
+    font-weight: 600;
+    font-size: 1rem;
+    background-color: var(--cor-primaria);
+    border: 1.5px solid var(--cor-primaria);
+    color: white;
+    border-radius: 16px;
+    cursor: pointer;
+    font-family: var(--fonte-texto);
+}
+@media(min-width: 750px){
+    #hamburguer{
+        display: none;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+    header{
+        flex-direction: row;
+    }
+    .buttoes-header{
+        display: flex;
+    }
+}
+
+
+.carregando{
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--fundo-modal);
+    position: fixed;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 10;
+}
+.carregando h2{
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+}
+.carregando-on{
+    display: flex;
+}
