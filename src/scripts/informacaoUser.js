@@ -20,12 +20,13 @@ const usuario = async () => {
 
   const fotoPerfil = document.querySelector(".img-perfil")
   fotoPerfil.src = userJson.avatar_url
+  fotoPerfil.id = "img-perfil"
 
   const infoUsuario = document.querySelector(".info-usuario")
 
   infoUsuario.innerHTML = `
         
-        <p><span>Nome:</span> ${userJson.name}</p>
+        <p id="name-perfil"><span>Nome:</span> ${userJson.name}</p>
         <p><span>E-mail:</span> ${userJson.email}</p>
         `
 
