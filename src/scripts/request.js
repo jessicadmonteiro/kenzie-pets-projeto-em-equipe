@@ -101,41 +101,28 @@ export async function deletarUsuario() {
 }
 
 export async function editarPet(body, id) {
-<<<<<<< HEAD
-     try {
-=======
     try {
->>>>>>> 7f6367dba59454696dff23b59d782bb430c5df5b
-    const request = await fetch(`https://m2-api-adot-pet.herokuapp.com/pets/${id}`, {
-
-        method: "PATCH",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": `Bearer ${localStorage.getItem("userToken")}`,
-        },
-        body: JSON.stringify(body)
-    })
-        if (request.ok) {
-
-            const response = await request.json()
-
-            toast("Sucesso!", "Os dados foram Atualizados.")
-
-            setTimeout(() => {
-
-                return window.location.reload()
-    
-            }, 4000)
-
-
+        const request = await fetch(`https://m2-api-adot-pet.herokuapp.com/pets/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.getItem("userToken")}`,
+            },
+            body: JSON.stringify(body)
+        })
+            if (request.ok) {
+                const response = await request.json()
+                toast("Sucesso!", "Os dados foram Atualizados.")
+                setTimeout(() => {
+                    return window.location.reload()
+                }, 4000)
+            }
+        }
+        catch (err) {
+            console.log(err)
         }
     }
-    catch (err) {
 
-        console.log(err)
-
-    }
-}
 
 export async function deletarPet(id) {
 
