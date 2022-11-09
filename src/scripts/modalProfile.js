@@ -197,7 +197,11 @@ export function petAtualizar() {
 
     botaoFechar.addEventListener("click", () => {
         let modalMaior = document.querySelector(".modal-atualizar-pet-fundo-att")
+
         modalMaior.classList.remove("modal-abrir")
+
+        location.reload()
+        
     })
 
     formulario.append(tagH3, inputNome, inputRaca, inputEsp, inputAvatar, botaoCadastrar)
