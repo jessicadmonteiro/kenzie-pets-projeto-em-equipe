@@ -44,6 +44,8 @@ export async function editarPerfilUsuario(body) {
 
             const response = await request.json()
 
+            return window.location.reload()
+
         } 
     }
     catch (err) {
@@ -93,4 +95,21 @@ export async function deletarUsuario() {
     })
         .then(res => res.json())
         .then(res => console.log(res))
+}
+
+export async function editarPet(body, id) {
+
+    console.log(body, id)
+
+    await fetch(`https://m2-api-adot-pet.herokuapp.com/pets/${id}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${localStorage.getItem("userToken")}`,
+        },
+        body: JSON.stringify(body)
+    })
+        .then(res => res.json())
+        .then(res => console.log(res))
+
 }
