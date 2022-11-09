@@ -18,3 +18,18 @@ cadastrarPet()
 autorizacao()
 
 usuario ()
+
+
+function logoutPaginaProfile(){
+    const buttonLogout = document.querySelector(".botao-logout")
+    const carregando = document.querySelector(".carregando")
+
+    buttonLogout.addEventListener("click", (e)=>{
+        localStorage.removeItem("userToken")
+        carregando.classList.add("carregando-on")
+        setTimeout(() => {
+            window.location.href = './../../../index.html'
+        }, 3000);
+    })
+}
+logoutPaginaProfile()
